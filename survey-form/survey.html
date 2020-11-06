@@ -1,0 +1,140 @@
+<html lang="en">
+
+<head>
+
+    <!--  Meta  -->
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+
+    <!--  Styles  -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="survey.css">
+</head>
+
+<body class="orange-background">
+    <div class="container">
+        <h1 id="title" class="brown-border">Survey Form</h1>
+
+        <p id="description"> Let us know how we can improve <strong class="green-text">freeCodeCamp</strong></p>
+        <br>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="col-sm-6">
+                    <form id="survey-form">
+                        <fieldset>
+
+                            <div class="form-group">
+                                <label id="name-label"><em>* Name</em></label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter name" required />
+                            </div>
+                            <br>
+                            <p>
+                                <div class="form-group">
+                                    <label id="email-label"><em>* Email</em></label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email"
+                                        required />
+                            </p>
+                </div>
+                <br>
+                <p>
+                    <label id="number-label"><em>* Age</em></label>
+                    <input type="number" id="number" placeholder="Enter age" min="0" max="100" />
+                </p>
+                </fieldset>
+
+                <p> <em>which option best describes your current role?</em></p>
+                <select class="form-control" id="dropdown">
+                    <option value="student">Student</option>
+                    <option value="fullTimeLearner">Full Time Learner</option>
+                    <option value="fullTimeJob">Full Time Job</option>
+                    <option value="preferNotToSay">Prefer Not To Say</option>
+                    <option value="other">Other</option>
+                </select><br>
+                <br>
+
+                <p><em>How likely is it that you would recommend freeCodeCamp to a friend?</em></p>
+                <div class="form-check">
+                    <input id="radiobuttons" class="form-check-input" type="radio" value="Definitely"
+                        name="definitely-maybe-notsure" />
+                    <label for="Definitely" class="form-check-label">Definitely</label>
+                </div>
+                <br>
+
+                <div class="form-check">
+                    <input id="radiobuttons" class="form-check-input" type="radio" value="maybe"
+                        name="definitely-maybe-notsure" />
+                    <label for="Maybe" clas="form-check-label">Maybe</label>
+                </div>
+                <br>
+
+                <div class="form-check">
+                    <input id="radiobuttons" class="form-check-input" type="radio" value="not-sure"
+                        name="definitely-maybe-notsure" />
+                    <label for="not-sure" class="form-check-label">Not Sure</label>
+                </div>
+                <br>
+
+                <p><em>What do you like most in FCC:</em></p>
+                <select class="form-control">
+                    <option value="challenges">Challenges</option>
+                    <option value="projects">Projects</option>
+                    <option value="community">Community</option>
+                    <option value="openSource">Open Source</option>
+                </select><br>
+
+                <p><em>Things that should be improved in the future </em><br> (Check all that apply):</p>
+                <div class="checkbox">
+                    <label for="frontEndProjects">
+                        <input type="checkbox" value="frontEndProjects" name="improvements" />Front-End Projects</label>
+                    <br>
+                    <label for="backEndPprojects">
+                        <input type="checkbox" value="backEndProjects" name="improvements" />Back-End Projects</label>
+                    <br>
+                    <label for="dataVisualization">
+                        <input type="checkbox" value="dataVisualization" name="improvements" />Data
+                        Visualization</label><br>
+                    <label for="challenges">
+                        <input type="checkbox" value="challenges" name="improvements" />Challenges</label><br>
+                    <label for="openSourceCommunity">
+                        <input type="checkbox" value="openSourceCommunity" name="improvements" />Open Source
+                        Community</label><br>
+                    <label for="gitterHelpRooms">
+                        <input type="checkbox" value="gitterHelpRooms" name="improvements">Gitter Help Rooms</label><br>
+                    <label for="vdeos">
+                        <input type="checkbox" value="videos" name="improvemets" />Videos</label><br>
+                    <label for="cityMeetups">
+                        <input type="checkbox" value="cityMeetups" name="improvements" />City Meetups</label><br>
+                    <label for="wiki">
+                        <input type="checkbox" value="wiki" name="improvements" />Wiki</label><br>
+                    <label for="forum">
+                        <input type="checkbox" value="forum" name="improvements">Forum</label><br>
+                    <label for="additionalCourses">
+                        <input type="checkbox" value="additionalCourses" name="improvements" />Additional
+                        Courses</label>
+                </div>
+                <br>
+                <form action="submit-form">
+                    <div class="row">
+                        <div class="col-sm">
+                            <label><em>Comments or Suggestions</em></label>
+                        </div>
+                    </div>
+                    <div class="col-sm"><textarea class="form-control" rows="4" columns="100" input
+                            type="text">Enter your comments here...</textarea>
+                    </div>
+                    <br>
+                    <div class="col text-center">
+                        <button id="submit" type="submit" class="btn btn-primary center">Submit</button>
+                    </div>
+                </form>
+
+                <!-- Scripts -->
+                <script src="scripts/index.js"></script>
+                <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+</body>
+
+</html>
